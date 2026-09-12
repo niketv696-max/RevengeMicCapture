@@ -6,7 +6,7 @@
       "name": "Mikki_Rays"
     }
   ],
-  "main": "index.js",
+  "main": "https://raw.githubusercontent.com/niketv696-max/RevengeMicCapture/main/plugins/mic-diagnostic/index.js",
   "vendetta": {
     "icon": "ic_mic"
   }
