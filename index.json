@@ -1,7 +1,0 @@
-{
-  "name": "RevengeMicCapture",
-  "description": "Experimental microphone and Discord audio diagnostic plugins",
-  "plugins": [
-    "plugins/mic-diagnostic"
-  ]
-}
