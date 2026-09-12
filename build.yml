@@ -1,0 +1,26 @@
+name: Build Revenge Plugin
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create plugin ZIP
+        run: |
+          cd plugins/mic-diagnostic
+          zip -r ../../mic-diagnostic.zip manifest.json index.js
+
+      - name: Upload plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: mic-diagnostic
+          path: mic-diagnostic.zip
