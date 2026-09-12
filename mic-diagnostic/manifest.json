@@ -1,0 +1,13 @@
+{
+  "name": "Mic Diagnostic",
+  "description": "Discord voice and audio diagnostic plugin",
+  "authors": [
+    {
+      "name": "Mikki_Rays"
+    }
+  ],
+  "main": "https://raw.githubusercontent.com/niketv696-max/RevengeMicCapture/main/plugins/mic-diagnostic/index.js",
+  "vendetta": {
+    "icon": "ic_mic"
+  }
+}
