@@ -1,10 +1,19 @@
 {
+  "format": 1,
+  "id": "mikki.micdiagnostic",
   "name": "Mic Diagnostic",
-  "description": "Diagnostic plugin for testing Discord voice/audio modules",
-  "authors": [
-    {
-      "name": "Mikki_Rays"
+  "description": "Discord voice and audio diagnostic plugin",
+  "author": "Mikki_Rays",
+  "version": "1.0.0",
+  "dependencies": {
+    "revenge.api": {
+      "version": ">=1"
+    },
+    "discord": {
+      "version": "*"
     }
-  ],
-  "main": "index.js"
+  },
+  "dist": {
+    "script": "index.js"
+  }
 }
