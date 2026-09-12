@@ -1,4 +1,4 @@
-name: Build Revenge Plugin
+name: Publish Revenge Plugin
 
 on:
   workflow_dispatch:
@@ -6,21 +6,25 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create plugin ZIP
+      - name: Prepare dist
         run: |
-          cd plugins/mic-diagnostic
-          zip -r ../../mic-diagnostic.zip manifest.json index.js
+          mkdir -p dist/mic-diagnostic
+          cp plugins/mic-diagnostic/index.js dist/mic-diagnostic/index.js
+          cp plugins/mic-diagnostic/manifest.json dist/mic-diagnostic/manifest.json
 
-      - name: Upload plugin
-        uses: actions/upload-artifact@v4
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: mic-diagnostic
-          path: mic-diagnostic.zip
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
