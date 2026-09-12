@@ -1,0 +1,10 @@
+{
+  "name": "Mic Diagnostic",
+  "description": "Diagnostic plugin for testing Discord voice/audio modules",
+  "authors": [
+    {
+      "name": "Mikki_Rays"
+    }
+  ],
+  "main": "index.js"
+}
